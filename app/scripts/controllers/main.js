@@ -18,8 +18,10 @@ angular.module('localtodochallengeApp')
     }, true);
 
     $scope.addTodo = function () {
-      $scope.todos.push($scope.todo);
-      $scope.todo = '';
+      if ($scope.todo !== ''){
+        $scope.todos.push($scope.todo);
+        $scope.todo = '';
+      }
     };
 
     $scope.removeTodo = function (index) {
